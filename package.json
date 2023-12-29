@@ -1,6 +1,7 @@
 {
   "name": "lucky-flats",
   "version": "0.1.0",
+  "homepage": "https://aln-zva.github.io/lucky/",
   "private": true,
   "scripts": {
     "dev": "next dev",
