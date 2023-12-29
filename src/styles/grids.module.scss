@@ -1,0 +1,148 @@
+.main {
+  display: grid;
+  grid-template-areas: 'logo ask' 'checked checked' 'title title' 'content content';
+  grid-template-rows: auto auto 1fr auto;
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__contact {
+    position: absolute;
+  }
+
+  &__content {
+    grid-area: content;
+  }
+
+  &__ask {
+    grid-area: ask;
+  }
+
+  &__checked {
+    grid-area: checked;
+  }
+
+  @media (min-width: 960px) {
+    grid-template-areas: 'logo contact' 'title title' 'content checked' 'content ask';
+    grid-template-rows: 1fr auto;
+
+    &__contact {
+      grid-area: contact;
+    }
+
+
+    &__checked {
+      grid-area: checked;
+    }
+  }
+}
+
+.buying {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__left,
+  &__right,
+  &__cards1,
+  &__cards2,
+  &__cards3,
+  &__btn,
+  &__title {
+    position: relative;
+  }
+
+  @media (min-width: 960px) {
+    display: grid;
+    grid-template-areas: 'left-img title title title'
+    'left-img cards-1 cards-1 cards-1'
+  'cards-2 cards-2 cards-2 right-img'
+  '. cards-3 cards-3 right-img'
+  '. . btn .';
+    grid-template-columns: repeat(4, 1fr);
+
+    &__left {
+      grid-area: left-img;
+    }
+
+    &__right {
+      grid-area: right-img;
+    }
+
+    &__cards1 {
+      grid-area: cards-1;
+    }
+
+    &__cards2 {
+      grid-area: cards-2;
+    }
+
+    &__cards3 {
+      grid-area: cards-3;
+    }
+
+    &__btn {
+      grid-area: btn;
+    }
+
+    &__title {
+      grid-area: title;
+    }
+  }
+
+  @media (min-width: 1680px) {
+    gap: 20px;
+  }
+}
+
+.map {
+  display: grid;
+  grid-template-areas: 'map' 'description' 'list' 'catalog';
+
+  &__description {
+    grid-area: description;
+  }
+
+  &__map {
+    grid-area: map;
+  }
+
+  &__list {
+    grid-area: list;
+  }
+
+  &__catalog {
+    grid-area: catalog;
+  }
+
+  @media (min-width: 960px) {
+    grid-template-areas: 'description .' 'map list' 'catalog list';
+  }
+}
+
+.investment {
+  display: grid;
+  grid-template-areas: 'diagram diagram' 'description btn';
+
+  &__btn {
+    grid-area: btn;
+  }
+
+  &__diagram {
+    grid-area: diagram;
+  }
+
+  &__description {
+    grid-area: description;
+  }
+
+  @media (min-width: 960px) {
+    grid-template-areas: 'btn diagram' 'btn description';
+
+  }
+}

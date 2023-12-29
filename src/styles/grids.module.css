@@ -1,0 +1,120 @@
+.main {
+  display: grid;
+  grid-template-areas: "logo ask" "checked checked" "title title" "content content";
+  grid-template-rows: auto auto 1fr auto;
+}
+.main__logo {
+  grid-area: logo;
+}
+.main__title {
+  grid-area: title;
+}
+.main__contact {
+  position: absolute;
+}
+.main__content {
+  grid-area: content;
+}
+.main__ask {
+  grid-area: ask;
+}
+.main__checked {
+  grid-area: checked;
+}
+@media (min-width: 960px) {
+  .main {
+    grid-template-areas: "logo contact" "title title" "content checked" "content ask";
+    grid-template-rows: 1fr auto;
+  }
+  .main__contact {
+    grid-area: contact;
+  }
+  .main__checked {
+    grid-area: checked;
+  }
+}
+
+.buying {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.buying__left, .buying__right, .buying__cards1, .buying__cards2, .buying__cards3, .buying__btn, .buying__title {
+  position: relative;
+}
+@media (min-width: 960px) {
+  .buying {
+    display: grid;
+    grid-template-areas: "left-img title title title" "left-img cards-1 cards-1 cards-1" "cards-2 cards-2 cards-2 right-img" ". cards-3 cards-3 right-img" ". . btn .";
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .buying__left {
+    grid-area: left-img;
+  }
+  .buying__right {
+    grid-area: right-img;
+  }
+  .buying__cards1 {
+    grid-area: cards-1;
+  }
+  .buying__cards2 {
+    grid-area: cards-2;
+  }
+  .buying__cards3 {
+    grid-area: cards-3;
+  }
+  .buying__btn {
+    grid-area: btn;
+  }
+  .buying__title {
+    grid-area: title;
+  }
+}
+@media (min-width: 1680px) {
+  .buying {
+    gap: 20px;
+  }
+}
+
+.map {
+  display: grid;
+  grid-template-areas: "map" "description" "list" "catalog";
+}
+.map__description {
+  grid-area: description;
+}
+.map__map {
+  grid-area: map;
+}
+.map__list {
+  grid-area: list;
+}
+.map__catalog {
+  grid-area: catalog;
+}
+@media (min-width: 960px) {
+  .map {
+    grid-template-areas: "description ." "map list" "catalog list";
+  }
+}
+
+.investment {
+  display: grid;
+  grid-template-areas: "diagram diagram" "description btn";
+}
+.investment__btn {
+  grid-area: btn;
+}
+.investment__diagram {
+  grid-area: diagram;
+}
+.investment__description {
+  grid-area: description;
+}
+@media (min-width: 960px) {
+  .investment {
+    grid-template-areas: "btn diagram" "btn description";
+  }
+}
+
+/*# sourceMappingURL=grids.module.css.map */
