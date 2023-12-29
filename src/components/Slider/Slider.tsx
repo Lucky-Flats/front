@@ -1,13 +1,17 @@
 'use client';
 import { ENDPOINTS, SLIDER_RESPONSIVE } from '@/config';
 import React, { useEffect, useRef, useState } from 'react';
-import Carousel, { ButtonGroupProps } from 'react-multi-carousel';
+import Carousel, {
+    ButtonGroupProps,
+    DotProps,
+    ResponsiveType,
+} from 'react-multi-carousel';
 
 import { ButtonArrowIcon } from '@/assets/icons';
 
 type TSliderProps = {
     items: React.ReactNode[];
-    responsive?: any;
+    responsive?: ResponsiveType;
     arrows?: boolean;
     dots?: boolean;
     type?: 'full';
@@ -118,7 +122,7 @@ export function Slider({
         );
     };
 
-    const CustomDot = ({ onClick, active }: any) => (
+    const CustomDot = ({ onClick, active }: DotProps) => (
         <li>
             <button
                 onClick={onClick}

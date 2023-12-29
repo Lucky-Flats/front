@@ -1,3 +1,5 @@
+import { ResponsiveType } from 'react-multi-carousel';
+
 export const ENDPOINTS = {
     '3xl': {
         min: 1920,
@@ -47,7 +49,7 @@ export const ENDPOINTS = {
     },
 };
 
-export const SLIDER_RESPONSIVE = {
+export const SLIDER_RESPONSIVE: ResponsiveType = {
     xxl: {
         breakpoint: { max: 6000, min: ENDPOINTS.smMd.min },
         items: 3,
@@ -59,7 +61,7 @@ export const SLIDER_RESPONSIVE = {
     },
 };
 
-export const ONE_SLIDE_SLIDER_RESPONSIVE = {
+export const ONE_SLIDE_SLIDER_RESPONSIVE: ResponsiveType = {
     md: {
         breakpoint: { max: 6000, min: ENDPOINTS.xxs.min },
         items: 1,
