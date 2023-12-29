@@ -2,7 +2,11 @@
 import { TSvgIconProps } from '@/types';
 import React, { useRef, useState } from 'react';
 
-export function MapImage(props: TSvgIconProps) {
+type TMapImageProps = TSvgIconProps & {
+    parentSize: number;
+};
+
+export function MapImage({ parentSize, ...props }: TMapImageProps) {
     const [xPos, setXPos] = useState(0);
     const [yPos, setYPos] = useState(0);
     const [showTag, setShowTag] = useState(false);
@@ -20,7 +24,7 @@ export function MapImage(props: TSvgIconProps) {
     const tagComponent = (
         <div
             className={`${
-                !showTag ? 'hidden' : 'md:flex'
+                !showTag ? 'hidden' : 'hidden md:flex'
             } absolute items-center justify-center text-center bg-green border border-solid border-white text-white font-semibold text-[10px] md:h-[30px] md:w-[103px] 2xl:h-[60px] 2xl:w-[206px] 2xl:text-sm rounded-[150px]`}
             style={{ top: yPos, left: xPos }}
         >
@@ -37,14 +41,20 @@ export function MapImage(props: TSvgIconProps) {
         const element = document.getElementById(id);
 
         if (element && parentRef.current) {
-            console.log(parentRef.current.getBoundingClientRect().width);
-            console.log(element.getBoundingClientRect());
             setCurrentTagId(id);
             setShowTag(true);
-            setXPos(element.getBoundingClientRect().x);
+            setXPos(
+                element.getBoundingClientRect().x -
+                    (window.innerWidth - parentSize) / 2 +
+                    element.getBoundingClientRect().width +
+                    10
+            );
             setYPos(
-                parentRef.current.getBoundingClientRect().height -
-                    element.getBoundingClientRect().top
+                Math.abs(
+                    parentRef.current?.getBoundingClientRect().height -
+                        (element.getBoundingClientRect().top -
+                            parentRef.current?.getBoundingClientRect().top)
+                )
             );
         }
     };
@@ -55,7 +65,7 @@ export function MapImage(props: TSvgIconProps) {
         );
 
         if (element) {
-            // setShowTag(false);
+            setShowTag(false);
         }
     };
 
