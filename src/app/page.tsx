@@ -1,6 +1,7 @@
 import { Footer } from '@/components';
+import { ChoicesForm } from '@/containers/ChoicesForm/ChoicesForm';
 import { MainScreen } from '@/containers/MainScreen/MainScreen';
-import { OrderCarForm } from '@/components/OrderCarForm/OrderCarForm';
+import { OrderCarForm } from '@/containers/OrderCarForm/OrderCarForm';
 import { About, ContactTelegram, Investments } from '@/containers';
 import { BuyingProcess } from '@/containers/BuyingProcess/BuyingProcess';
 import { Clients } from '@/containers/Clients/Clients';
@@ -22,6 +23,7 @@ export default function MainPage() {
                 <Clients />
                 <OrderCarForm />
                 <Investments />
+                <ChoicesForm />
                 <ContactTelegram />
             </main>
             <Footer />

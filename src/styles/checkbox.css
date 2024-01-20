@@ -1,0 +1,59 @@
+.MuiCheckbox-root {
+    padding: 0;
+    color: #3E9F96 !important;
+}
+
+.MuiCheckbox-root:hover,
+.MuiCheckbox-root:active,
+.MuiCheckbox-root:focus,
+.MuiCheckbox-root:focus-visible {
+    box-shadow: none;
+    background: transparent;
+}
+
+.MuiSvgIcon-root {
+    width: 18px;
+    height: 18px;
+}
+
+.MuiFormControlLabel-root {
+    gap: 8px;
+}
+
+.MuiTypography-root {
+    font-family: Unbounded, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+@media (min-width: 960px) {
+    .MuiSvgIcon-root {
+        width: 9px;
+        height: 9px;
+    }
+
+    .MuiTypography-root {
+        font-size: 8px;
+    }
+
+    .MuiFormControlLabel-root {
+        gap: 4px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .MuiSvgIcon-root {
+        width: 18px;
+        height: 18px;
+    }
+
+    .MuiTypography-root {
+        font-size: 16px;
+    }
+
+    .MuiFormControlLabel-root {
+        gap: 8px;
+    }
+}

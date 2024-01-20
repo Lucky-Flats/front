@@ -17,6 +17,11 @@ export const COMMON_CONTENT = {
     getCatalog: 'Получить каталог с наилучшими вариантами',
     subscribe: 'Подписаться',
     dueDate: 'Срок сдачи',
+    getVariants: 'Получить варианты',
+    send: 'Отправить в',
+    decoration: 'Отделка',
+    agreeWithTerms:
+        'Нажимая кнопку «Получить варианты», вы соглашаетесь с политикой конфиденциальности сайта',
 };
 
 export const MAIN_CONTENT = {
@@ -156,4 +161,18 @@ export const CONTACT = {
             канале:
         </>
     ),
+};
+
+export const CHOICES = {
+    title: (
+        <div className="flex flex-col max-w-[600px] text-[21px] leading-1.1 text-dark font-light xl:max-w-[1300px] xl:text-[42px]">
+            <div>Затрудняетесь с выбором —</div>
+            <div className="self-end max-w-[527px] [&>span]:font-semibold [&>span]:text-green xl:max-w-[1054px]">
+                пройдите короткий опрос
+                <br />и <span>получите 5 лучших предложений</span>
+            </div>
+        </div>
+    ),
+    rooms: 'комнаты',
+    price: 'млн. руб.',
 };
