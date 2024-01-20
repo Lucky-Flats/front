@@ -1,0 +1,53 @@
+.MuiSlider-thumb {
+
+}
+
+.MuiSlider-root {
+    color: #3E9F96;
+    border-radius: 0;
+}
+
+.MuiSlider-rail {
+    opacity: 1;
+    color: #282828;
+    height: 2px;
+}
+
+.MuiSlider-track {
+    color: #3E9F96;
+    height: 4px;
+}
+
+.MuiSlider-valueLabel {
+    background: #3E9F96;
+    height: 34px;
+    width: 46px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Unbounded, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%;
+}
+
+.MuiSlider-valueLabel:before {
+    content: none;
+}
+
+.MuiSlider-mark {
+    display: none;
+}
+
+.MuiSlider-markLabel {
+    font-family: Unbounded, sans-serif;
+    color: #282828;
+    font-weight: normal;
+}
+
+.MuiSlider-markLabel:nth-child(2) {
+    transform: translateX(-100%);
+}
